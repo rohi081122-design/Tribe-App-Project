@@ -1,0 +1,99 @@
+/* =====================================================================
+   contact.css - Contact page
+   ===================================================================== */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 340px minmax(0, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+.contact-info {
+  display: grid;
+  gap: 14px;
+}
+
+.contact-info-card {
+  display: flex;
+  gap: 14px;
+  padding: 20px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-info-card h2 {
+  margin: 0 0 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.contact-info-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.contact-info-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--terracotta-100);
+  color: var(--terracotta-700);
+}
+
+.contact-info-card:nth-child(2) .contact-info-icon {
+  background: var(--forest-100);
+  color: var(--forest-700);
+}
+
+.contact-info-card:nth-child(3) .contact-info-icon {
+  background: var(--ochre-light);
+  color: #7a560f;
+}
+
+.contact-form-card {
+  padding: 32px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 6px solid var(--forest-700);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+}
+
+.contact-form-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+}
+
+@media (max-width: 860px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Show the form first on small screens */
+  .contact-form-card {
+    order: -1;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-form-card {
+    padding: 22px 16px;
+  }
+
+  .contact-form-card .btn {
+    width: 100%;
+  }
+}
+
+/* The mobile number does not need the full width of the form */
+.contact-phone-input {
+  max-width: 320px;
+}

@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output
+frontend/dist/
+
+# Environment variables - these contain secrets and must never be committed
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
